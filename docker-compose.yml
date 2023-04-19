@@ -1,0 +1,13 @@
+version: '3.3'
+services:
+    softethervpn:
+        privileged: true
+        image: siomiz/softethervpn
+        ports:
+            - 500:500/udp
+            - 4500:4500/udp
+            - 1701:1701/tcp
+            - 5555:5555/tcp
+        environment:
+            - 'PSK=password0'
+            - 'USERS=user:password1'
